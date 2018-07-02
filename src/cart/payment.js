@@ -31,6 +31,7 @@ class MakeAPayMent extends React.Component {
     }
 
     motherOfTextHandler(text, type) {
+        console.log(type);
         switch (type) {
             case "Name":
                 this.setState({ Name: text });
@@ -48,6 +49,14 @@ class MakeAPayMent extends React.Component {
         }
     }
     saveOrder() {
+        if (isNaN(this.state.Phone) === true) {
+            this.setState({ Phone: 'Must be a number' });
+            return;
+        }
+        if (this.state.Name.length === 0 || this.state.Phone.length === 0 || this.state.Email.length === 0 || this.state.Address.length === 0) {
+            return;
+        }
+
         this.controlModal(true);
         sendOrder(this.props.user.uid, this.props.Cart);
         this.props.dispatch({ type: 'EMPTY_CART' });
@@ -72,7 +81,7 @@ class MakeAPayMent extends React.Component {
                             key={i}
                             title={obj.title}
                             value={obj.value}
-                            motherOfTextHandler={() => this.motherOfTextHandler()}
+                            motherOfTextHandler={(text, title) => this.motherOfTextHandler(text, title)}
                             pHolder={"Cant let this empty"}
                         />
                     ))

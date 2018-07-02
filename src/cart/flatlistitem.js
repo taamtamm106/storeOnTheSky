@@ -12,8 +12,8 @@ export default class FlatListItem extends React.Component {
 
                 <View style={styles.contentFrame}>
                     <View style={styles.nameFrame}>
-                        <Text style={{ fontSize: 22 }}>{this.props.obj.item.productName}</Text>
-                        <Text style={{ fontSize: 22 }}>Price: ${this.props.obj.item.productPrice}</Text>
+                        <Text style={{ fontSize: 20 }}>{this.props.obj.item.productName}</Text>
+                        <Text style={{ fontSize: 20 }}>Price: ${this.props.obj.item.productPrice}</Text>
                     </View>
                     <View style={styles.priceFrame}>
                         <View style={styles.quanityFrame}>

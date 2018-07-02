@@ -30,6 +30,5 @@ export const fetchData = async (myLatitude, myLongitude) => {
         .then((response) => { return response.json() })
         .catch((error) => {
             console.error(error);
-            return null;
         });
 }

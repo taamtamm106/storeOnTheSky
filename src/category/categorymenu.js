@@ -12,14 +12,12 @@ class CategoryMenu extends React.Component {
     }
 
     async componentDidMount() {
-        this.flatListRef.scrollToIndex({ animated: true, index: this.props.index });
         const arr = await getList("category");
         this.setState({ categoryList: arr });
 
     }
     render() {
         return (
-
             <FlatList
                 ref={(ref) => { this.flatListRef = ref }}
                 showsVerticalScrollIndicator={false}
@@ -35,7 +33,6 @@ class CategoryMenu extends React.Component {
                     dispatch={this.props.dispatch}
                 />}
             />
-
         );
     }
 }

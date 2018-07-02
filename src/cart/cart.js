@@ -23,7 +23,7 @@ class CartScreen extends React.Component {
                                 obj.amount).reduce(function (accumulator, currentValue) { return accumulator + currentValue; }, 0)}
                             <Text> item added to cart</Text>
                         </Text>
-                        <Text style={{ fontSize: 22, padding: 10 }}>Total cost: ${this.props.Cart.map(obj => obj.amount * obj.item.productPrice).reduce(function (accumulator, currentValue) { return accumulator + currentValue; }, 0)
+                        <Text style={{ fontSize: 18, padding: 10 }}>Total cost: ${this.props.Cart.map(obj => obj.amount * obj.item.productPrice).reduce(function (accumulator, currentValue) { return accumulator + currentValue; }, 0)
                         }</Text>
                         {this.props.Cart.length > 0 ?
                             <View>
@@ -72,6 +72,7 @@ export const styles = StyleSheet.create({
         height: height * 0.08,
         alignItems: 'center',
         justifyContent: 'center',
+        paddingBottom: 10,
     },
 
 });

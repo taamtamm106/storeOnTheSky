@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,  TextInput, StyleSheet } from 'react-native'
+import { View, Text, TextInput, StyleSheet } from 'react-native'
 
 export default class DeliveryInfo extends React.Component {
     render() {
@@ -10,13 +10,13 @@ export default class DeliveryInfo extends React.Component {
                 </View>
                 <View style={{ flex: 8 }} >
                     <TextInput
-                        value={this.props.value}
                         editable={true}
                         multiline={true}
                         underlineColorAndroid={'transparent'}
                         onChangeText={(text) => this.props.motherOfTextHandler(text, this.props.title)}
                         onSubmitEditing={(text) => this.props.motherOfTextHandler(text, this.props.title)}
                         placeholder={this.props.pHolder}
+                        value={this.props.value}
                     />
                 </View>
             </View >
