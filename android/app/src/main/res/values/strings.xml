@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">storeOnTheSky</string>
+    <string name="fb_app_id">147712522758462</string>
+    <string name="ak_client_token">cb9fb7bd815303d57fb14ad1ff6634ac</string>
+    <!-- <string name="FACEBOOK_APP_ID">222594398531128</string>
+    <string name="ACCOUNT_KIT_CLIENT_TOKEN">d767dade49e9c8dadf751808ff7206c4</string> -->
+</resources>
